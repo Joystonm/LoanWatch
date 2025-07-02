@@ -1,0 +1,6 @@
+<svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="50" fill="#1d4ed8" rx="5" ry="5"/>
+  <text x="10" y="35" font-family="Arial" font-size="24" fill="white" font-weight="bold">LoanWatch</text>
+  <circle cx="170" cy="25" r="15" fill="white" opacity="0.8"/>
+  <path d="M170 15 L170 25 L180 25" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
