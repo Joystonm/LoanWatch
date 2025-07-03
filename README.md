@@ -27,7 +27,6 @@ LoanWatch combines machine learning with fairness-aware algorithms to:
 - **Bias Remediation Recommendations**: Actionable strategies to reduce bias
 - **API Integration**: 
   - **Groq** for LLM-powered natural language explanations
-  - Tavily for regulatory research and citations
 
 ## Technical Implementation
 
