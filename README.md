@@ -75,7 +75,7 @@ LoanWatch combines machine learning with fairness-aware algorithms to:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Joystom/LoanWatch.git
+   git clone https://github.com/Joystonm/LoanWatch.git
    cd LoanWatch
    ```
 
