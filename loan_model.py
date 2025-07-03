@@ -1,22 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-"""
-loan_model.py - Loan Approval Prediction with Fairness Auditing
-
-This script implements a machine learning pipeline for predicting loan approvals
-and auditing the model for fairness across protected attributes.
-
-The pipeline includes:
-1. Data loading and exploration
-2. Data cleaning and preprocessing
-3. Feature engineering
-4. Model training and evaluation
-5. Fairness auditing and bias detection
-6. Generating predictions for the test set
-
-Author: LoanWatch Team
-"""
 
 import pandas as pd
 import numpy as np
