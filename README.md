@@ -29,23 +29,6 @@ LoanWatch combines machine learning with fairness-aware algorithms to:
   - **Groq** for LLM-powered natural language explanations
   - Tavily for regulatory research and citations
 
-## Project Structure
-
-```
-LoanWatch/
-├── backend/               # FastAPI backend
-│   ├── src/               # Core ML and fairness logic
-│   ├── app.py             # API endpoints
-│   └── requirements.txt   # Dependencies
-├── data/                  # Data storage
-├── models/                # Trained models
-├── outputs/               # Predictions and visualizations
-├── notebook/              # Jupyter notebooks
-├── docs/                  # Documentation
-├── frontend/              # React frontend
-└── README.md              # Project overview
-```
-
 ## Technical Implementation
 
 ### Machine Learning Pipeline
@@ -93,15 +76,13 @@ LoanWatch/
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/LoanWatch.git
+   git clone https://github.com/Joystom/LoanWatch.git
    cd LoanWatch
    ```
 
 2. Set up the Python environment:
    ```
    cd backend
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
@@ -120,7 +101,7 @@ LoanWatch/
 
 1. Install dependencies:
    ```
-   cd ../frontend
+   cd frontend
    npm install
    ```
 
@@ -130,79 +111,3 @@ LoanWatch/
    ```
 
 3. Open your browser and navigate to `http://localhost:5173`
-
-## Usage
-
-### Training a Model
-
-1. Place your training data in the `data/` directory
-2. Use the API endpoint to train a model:
-   ```
-   POST /train
-   ```
-   With body:
-   ```json
-   {
-     "data_path": "data/loan_access_dataset.csv",
-     "use_fairness": true,
-     "fairness_method": "demographic_parity",
-     "protected_attributes": ["gender", "race", "age_group"]
-   }
-   ```
-
-### Making Predictions
-
-1. Submit a loan application through the frontend form
-2. Or use the API endpoint:
-   ```
-   POST /predict
-   ```
-   With body:
-   ```json
-   {
-     "age": 35,
-     "gender": "Female",
-     "race": "Black",
-     "marital_status": "Married",
-     "dependents": 2,
-     "income": 70000,
-     "loan_amount": 150000,
-     "loan_term": 360,
-     "credit_score": 720,
-     "employment_status": "Employed",
-     "employment_length": 5,
-     "property_area": "Urban",
-     "existing_loans": 1
-   }
-   ```
-
-### Analyzing Fairness
-
-1. Navigate to the "Fairness Analysis" tab in the frontend
-2. Select the protected attribute to analyze
-3. Compare metrics between the baseline and fair models
-4. View detailed disparity metrics and visualizations
-
-### Researching Regulations
-
-Use the API endpoint to research loan regulations:
-```
-POST /research-regulations
-```
-With body:
-```json
-{
-  "topic": "fair lending practices",
-  "max_results": 5
-}
-```
-
-## Fairness Approach
-
-LoanWatch implements a multi-layered approach to fairness:
-
-1. **Pre-processing**: Data cleaning and balancing to remove historical biases
-2. **In-processing**: Fairness constraints during model training
-3. **Post-processing**: Threshold adjustments for different groups
-4. **Monitoring**: Continuous fairness auditing and reporting
-
